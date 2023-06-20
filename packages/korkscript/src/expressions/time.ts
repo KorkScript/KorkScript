@@ -22,4 +22,9 @@ export const Minutes = new BasicExpression(
 
 export const Month = new BasicExpression(
     ["month", "currentMonth", "getMonth()", "getCurrentMonth()"]
+
+)
+
+export const Seconds = new BasicExpression(
+    ["seconds", "secs", "getSecond()", "getSecs()"]
 )

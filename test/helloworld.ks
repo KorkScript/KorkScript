@@ -2,11 +2,10 @@
 #use-time
 
 function sayHelloWorld() {
-    => "hello world"
+    => "hello"
+    => " "
+    => "world"
 }
 
-function getTime() {
-    => time:getMs()
-} 
 
 sayHelloWorld();
