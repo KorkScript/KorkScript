@@ -6,7 +6,7 @@ function sayHelloWorld() {
 }
 
 function getTime() {
-    time:getMs()
+    => time:getMs()
 } 
 
 sayHelloWorld();
