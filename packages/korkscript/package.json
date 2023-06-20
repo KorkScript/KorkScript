@@ -1,0 +1,33 @@
+{
+    "name": "KorkScript",
+    "description": "KorkScript is a superset of JavaScript that compiles to clean JavaScript output.",
+    "author": {
+        "name": "Zffu",
+        "email": "zffumc@gmail.com",
+        "url": "https://zffu.ml"
+    },
+    "main": "src/index",
+    "types": "src/index",
+    "keywords": ["nodejs", "javascript", "framework", "typescript"],
+    "homepage": "https://github.com/Zffu/KorkScript",
+    "bugs": {
+        "url": "https://github.com/Zffu/KorkScript/issues",
+        "email": "zffumc@gmail.com"
+    },
+    "repository": {
+        "url": "https://github.com/Zffu/KorkScript",
+        "directory": "packages/korkscript",
+        "type": "github"
+    },
+    "scripts": {
+        "build": "tsc && ksc",
+        "initcommands": "npm i -g ."
+    },
+    "bin": {
+        "korkscript": "src/bin/korkscript",
+        "ksc": "src/bin/ksc"
+    },
+    "devDependencies": {
+        "typescript": "5.1.3"
+    }
+}
