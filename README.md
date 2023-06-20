@@ -100,14 +100,20 @@ You can use this command to install KorkScript using npm
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-An hello world page
+An Example to return Hello world
 
 ```javascript
-function Page() {
-    return "Hello World"
+function helloWorld() {
+  // Returns hello world
+  => "hello world"
 }
 
-module.exports = {Page}
+function advancedHelloWorld() {
+  // Returns hello world
+  => "hello"
+  => " "
+  => "world"
+}
 ```
 
 
@@ -120,8 +126,7 @@ _For more examples, please refer to the [Documentation]("https://github.com/Zffu
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add an NPM package
-- [x] Added basic compiler and core
+- [x] Added some basic expressions
 - [ ] Add page components
 - [ ] Add dynamic page system
 - [ ] Add Obfuscation when exported
