@@ -127,9 +127,9 @@ _For more examples, please refer to the [Documentation]("https://github.com/Zffu
 ## Roadmap
 
 - [x] Added some basic expressions
-- [ ] Add page components
-- [ ] Add dynamic page system
-- [ ] Add Obfuscation when exported
+- [] Finish the compilator
+- [] Add some Advanced expressions
+- [] Add Module System
 
 See the [open issues](https://github.com/Zffu/KorkScript/issues) for a full list of proposed features (and known issues).
 
@@ -175,13 +175,13 @@ Project Link: [https://github.com/Zffu/KorkScript](https://github.com/Zffu/KorkS
 
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/Zffu/MoxtJS.svg?style=for-the-badge
-[contributors-url]: https://github.com/Zffu/MoxtJS/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Zffu/MoxtJS.svg?style=for-the-badge
-[forks-url]: https://github.com/Zffu/MoxtJS/network/members
-[stars-shield]: https://img.shields.io/github/stars/Zffu/MoxtJS.svg?style=for-the-badge
-[stars-url]: https://github.com/Zffu/MoxtJS/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Zffu/MoxtJS.svg?style=for-the-badge
-[issues-url]: https://github.com/Zffu/MoxtJS/issues
-[license-shield]: https://img.shields.io/github/license/Zffu/MoxtJS.svg?style=for-the-badge
-[license-url]: https://github.com/Zffu/MoxtJS/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Zffu/KorkScript.svg?style=for-the-badge
+[contributors-url]: https://github.com/Zffu/KorkScript/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Zffu/KorkScript.svg?style=for-the-badge
+[forks-url]: https://github.com/Zffu/KorkScript/network/members
+[stars-shield]: https://img.shields.io/github/stars/Zffu/KorkScript.svg?style=for-the-badge
+[stars-url]: https://github.com/Zffu/KorkScript/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Zffu/KorkScript.svg?style=for-the-badge
+[issues-url]: https://github.com/Zffu/KorkScript/issues
+[license-shield]: https://img.shields.io/github/license/Zffu/KorkScript.svg?style=for-the-badge
+[license-url]: https://github.com/Zffu/KorkScript/blob/master/LICENSE.txt
