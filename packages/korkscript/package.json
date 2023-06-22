@@ -21,7 +21,7 @@
         "type": "github"
     },
     "scripts": {
-        "build": "tsc",
+        "build": "tsc --build --clean",
         "initcommands": "npm i -g ."
     },
     "bin": {
