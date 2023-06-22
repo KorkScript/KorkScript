@@ -5,7 +5,7 @@ const fs = require("fs")
 
 
 export function runCompiler(path: string): Promise<CompilerResponse> {
-    const promise: Promise<CompilerResponse> = new Promise((reject, resolve) => {
+    const promise: Promise<CompilerResponse> = new Promise((resolve, reject) => {
         const compiler: Compiler = new Compiler(path)
         compiler.start()
         resolve(compiler.stop(true))

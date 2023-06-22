@@ -13,7 +13,9 @@ else {
 }
 
 compiler.runCompiler(p).then((response: CompilerResponse) => {
-    logger.info(JSON.stringify(response))
-}).catch((err: any) => {
-    logger.warn(JSON.stringify(err))
+    let timeTook: number = (response.endTimestamp - response.startTimestamp) / 1000
+    logger.info("Build finished with sucess in " + timeTook + "s")
+}).catch((response: CompilerResponse) => {
+    let timeTook: number = (response.endTimestamp - response.startTimestamp) / 1000
+    logger.warn("Build finished without sucess in " + timeTook + "s")
 })
