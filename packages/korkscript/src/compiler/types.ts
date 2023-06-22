@@ -33,6 +33,7 @@ export class Compiler {
             startTimestamp: this.startTimestamp,
             endTimestamp: this.stopTimestamp
         }
+        return response
     }
 }
 

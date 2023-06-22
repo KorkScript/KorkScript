@@ -7,7 +7,7 @@ const fs = require("fs")
 export async function runCompiler(path: string): CompilerResponse {
     const compiler: Compiler = new Compiler(path)
     compiler.start()
-    return compiler.stop()
+    return compiler.stop(true)
 }
 
 
