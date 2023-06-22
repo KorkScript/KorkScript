@@ -4,7 +4,7 @@ const fs = require("fs")
 
 
 
-export async function runCompiler(path: string): Promise<CompilerResponse> {
+export function runCompiler(path: string): Promise<CompilerResponse> {
     const promise: Promise<CompilerResponse> = new Promise((reject, resolve) => {
         const compiler: Compiler = new Compiler(path)
         compiler.start()
