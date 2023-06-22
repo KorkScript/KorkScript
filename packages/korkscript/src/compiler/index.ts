@@ -13,13 +13,14 @@ export function runCompiler(path: string): Promise<CompilerResponse> {
         getFilesToCompile(path).then((f: string[]) => {
             files = f;
         })
+        resolve(compiler.stop())
     
     })
     return promise;
 }
 
 export function getFilesToCompile(path: string): Promise<string[]> {
-    const promise = new Promise((resolve, reject) => {
+    const promise = new Promise<string[]>((resolve, reject) => {
         const f: string[] = []
         fileutils.getFileList(path).then((files: string[]) => {
             files.forEach(file => {
