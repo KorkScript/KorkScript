@@ -17,6 +17,6 @@ jobs:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies and build 🔧
-        run: cd packages/korkscript && npm i && npm run build
+        run: cd packages/korkscript && npm install --save-dev && npm run build
       - name: Testing
         run: node packages/korkscript/bin/korkscript
