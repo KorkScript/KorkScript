@@ -28,6 +28,7 @@
         "ksc": "src/bin/ksc"
     },
     "devDependencies": {
-        "typescript": "5.1.3"
+        "typescript": "5.1.3",
+        "@types/node": "20.3.1"
     }
 }

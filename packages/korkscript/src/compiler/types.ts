@@ -1,4 +1,5 @@
 export enum CompilerState {
+    NONE,
     BUILD_STARTED,
     PARSING_FILES,
     COMPILING_FILES,
@@ -6,16 +7,17 @@ export enum CompilerState {
 }
 
 export class Compiler {
-    public state: ?CompilerState;
+    public state: CompilerState;
     public readonly projectPath: string;
-    public readonly startTimestamp: number;
-    public readonly stopTimestamp: number;
+    public startTimestamp: number;
+    public stopTimestamp: number;
 
     constructor(path: string) {
         this.projectPath = path;
         
         this.startTimestamp = -1;
         this.stopTimestamp = -1;
+        this.state = CompilerState.NONE
     }
 
     start() {

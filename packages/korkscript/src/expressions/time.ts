@@ -21,10 +21,10 @@ export const Minutes = new BasicExpression(
 )
 
 export const Month = new BasicExpression(
-    ["month", "currentMonth", "getMonth()", "getCurrentMonth()"]
+    ["month", "currentMonth", "getMonth()", "getCurrentMonth()"], "new Date().getMonth()"
 
 )
 
 export const Seconds = new BasicExpression(
-    ["seconds", "secs", "getSecond()", "getSecs()"]
+    ["seconds", "secs", "getSecond()", "getSecs()"], "new Date().getSeconds()"
 )
