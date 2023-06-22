@@ -14,6 +14,6 @@ else {
 
 compiler.runCompiler(p).then((response: CompilerResponse) => {
     logger.info(JSON.stringify(response))
-}).catch((err: string) => {
-    logger.warn(err)
+}).catch((err: any) => {
+    logger.warn(JSON.stringify(err))
 })
