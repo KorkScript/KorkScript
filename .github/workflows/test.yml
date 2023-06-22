@@ -19,4 +19,4 @@ jobs:
       - name: Install dependencies and build 🔧
         run: cd packages/korkscript && npm install --save-dev && npm run build
       - name: Testing
-        run: node packages/korkscript/src/bin/korkscript
+        run: node packages/korkscript/src/bin/ksc
