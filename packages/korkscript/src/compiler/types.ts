@@ -23,9 +23,14 @@ export class Compiler {
         this.startTimestamp = new Date().getTime()
     }
 
-    stop() {
+    stop(sucess: boolean): CompilerResponse {
         this.state = CompilerState.BUILD_DONE;
         this.stopTimestamp = new Date().getTime();
+        const response: CompilerResponse = {
+            sucess: sucess,
+            startTimestamp: this.startTimestamp,
+            endTimestamp: this.stopTimestamp
+        }
     }
 }
 

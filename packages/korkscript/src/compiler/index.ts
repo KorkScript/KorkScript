@@ -2,11 +2,13 @@ import type { CompilerState, CompilerResponse } from "./types"
 import { Compiler } from "./types"
 const fs = require('fs');
 
-const compiler: Compiler;
+let compiler: Compiler = undefined;
 
 
 export async function runCompiler(path: string): CompilerResponse {
-    
+    compiler = new Compiler(path)
+    compiler.start()
+    return compiler.stop()
 }
 
 
