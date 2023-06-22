@@ -8,7 +8,7 @@ export async function runCompiler(path: string): Promise<CompilerResponse> {
     const promise: Promise<CompilerResponse> = new Promise((reject, resolve) => {
         const compiler: Compiler = new Compiler(path)
         compiler.start()
-        return compiler.stop(true)
+        resolve(compiler.stop(true))
     })
     return promise;
 }
