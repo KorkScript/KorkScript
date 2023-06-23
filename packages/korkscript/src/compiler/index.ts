@@ -3,7 +3,7 @@ import { Compiler } from "./types"
 const fs = require("fs")
 const path = require("path")
 const fileutils = require("../utils/fileutils")
-
+const logger = require("../utils/logger")
 
 export function runCompiler(p: string): Promise<CompilerResponse> {
     const promise: Promise<CompilerResponse> = new Promise((resolve, reject) => {
@@ -12,6 +12,7 @@ export function runCompiler(p: string): Promise<CompilerResponse> {
         let files: string[] = [];
         getFilesToCompile(p).then((f: string[]) => {
             files = f;
+            logger.info("Found " + f.length + " files to compile!")
         })
         resolve(compiler.stop(true))
     
