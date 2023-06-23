@@ -5,12 +5,12 @@ const path = require("path")
 const fileutils = require("../utils/fileutils")
 
 
-export function runCompiler(path: string): Promise<CompilerResponse> {
+export function runCompiler(p: string): Promise<CompilerResponse> {
     const promise: Promise<CompilerResponse> = new Promise((resolve, reject) => {
-        const compiler: Compiler = new Compiler(path)
+        const compiler: Compiler = new Compiler(p)
         compiler.start()
         let files: string[] = [];
-        getFilesToCompile(path).then((f: string[]) => {
+        getFilesToCompile(p).then((f: string[]) => {
             files = f;
         })
         resolve(compiler.stop())
@@ -19,13 +19,13 @@ export function runCompiler(path: string): Promise<CompilerResponse> {
     return promise;
 }
 
-export function getFilesToCompile(path: string): Promise<string[]> {
+export function getFilesToCompile(p: string): Promise<string[]> {
     const promise = new Promise<string[]>((resolve, reject) => {
         const f: string[] = []
-        fileutils.getFileList(path).then((files: string[]) => {
+        fileutils.getFileList(p).then((files: string[]) => {
             files.forEach(file => {
                 if(file.endsWith(".ks")) {
-                    f.push(path.join(path, file))
+                    f.push(path.join(p, file))
                 }
             })
         })
