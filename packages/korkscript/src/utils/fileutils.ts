@@ -1,8 +1,8 @@
-const getFileList = async (dirName) => {
-    let files = [];
+const getFileList = async (dirname: string) => {
+    let files: string[]= [];
     const items = await readdir(dirName, { withFileTypes: true });
 
-    for (const item of items) {
+    for (const item: string of items) {
         if (item.isDirectory()) {
             files = [
                 ...files,
