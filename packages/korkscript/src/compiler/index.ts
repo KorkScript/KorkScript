@@ -13,7 +13,7 @@ export function runCompiler(p: string): Promise<CompilerResponse> {
         getFilesToCompile(p).then((f: string[]) => {
             files = f;
         })
-        resolve(compiler.stop())
+        resolve(compiler.stop(true))
     
     })
     return promise;
