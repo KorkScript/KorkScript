@@ -1,5 +1,5 @@
 const path = require("path")
-const fs = require("fs")
+const fs = require("fs/promises")
 
 export async function getFileList(dirname: string) {
     let files: string[]= [];
