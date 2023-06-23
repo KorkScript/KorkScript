@@ -6,7 +6,7 @@ import type {CompilerResponse} from "../compiler/types"
 let p: string = ""
 
 if(process.argv.length > 2) {
-    p = path.join(__dirname, process.argv[2])
+    p = path.resolve(process.argv[2])
 }
 else {
     p = __dirname
