@@ -1,7 +1,7 @@
 const path = require("path")
 const fs = require("fs")
 
-const getFileList = async (dirname: string) => {
+export async function getFileList(dirname: string) {
     let files: string[]= [];
     const items = await fs.readdir(dirname, { withFileTypes: true });
 
