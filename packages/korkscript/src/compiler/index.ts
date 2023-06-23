@@ -3,7 +3,7 @@ import { Compiler } from "./types"
 const fs = require("fs")
 const path = require("path")
 const fileutils = require("../utils/fileutils")
-const logger = require("../utils/logger")
+const logger = require("../logger")
 
 export function runCompiler(p: string): Promise<CompilerResponse> {
     const promise: Promise<CompilerResponse> = new Promise((resolve, reject) => {
