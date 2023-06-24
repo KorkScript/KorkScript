@@ -42,7 +42,7 @@ export function getFilesToCompile(p: string): Promise<string[]> {
 
 
 export async function compileFile(dir: string): Promise<any[]> {
-   const promise: Promise<any[]> = new Promise((resolve, reject)) => {
+   const promise: Promise<any[]> = new Promise((resolve, reject) => {
    try {
         const content = await fs.readFile(dir, { encoding: 'utf8' });
 
