@@ -13,7 +13,7 @@ export async function runCompiler(p: string): Promise<CompilerResponse> {
         getFilesToCompile(p).then((f: string[]) => {
             logger.info("Found " + files.length + " files to compile!")
             f.forEach((file: string) => async function() {
-              await compileFile(file)
+               compileFile(file)
             })
             resolve(compiler.stop(true))
         })
