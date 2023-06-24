@@ -15,7 +15,7 @@ export async function runCompiler(p: string): Promise<CompilerResponse> {
             files = f;
             logger.info("Found " + files.length + " files to compile!")
             files.forEach((file: string) => async function() {
-              await compileFile(file)
+              compileFile(file)
             })
             resolve(compiler.stop(true))
         })
@@ -41,8 +41,9 @@ export function getFilesToCompile(p: string): Promise<string[]> {
 }
 
 
-export async function compileFile(dir: string) {
-    try {
+export async function compileFile(dir: string): Promise<any[]> {
+   const promise: Promise<any[]> = new Promise((resolve, reject)) => {
+   try {
         const content = await fs.readFile(dir, { encoding: 'utf8' });
 
         let useTypescript: boolean = false;
@@ -55,7 +56,11 @@ export async function compileFile(dir: string) {
 
         console.log(expressions.toString())
 
+        resolve(expressions)
+
     } catch (err) {
         console.log(err);
     }
+  })
+  return promise;
 }
