@@ -42,7 +42,7 @@ export function getFilesToCompile(p: string): Promise<string[]> {
 
 export  function compileFile(dir: string): Promise<any[]> {
    const promise: Promise<any[]> = new Promise((resolve, reject) => async function () {
-   console.log("hello")
+   console.log("compiling file")
    try {
         fs.readFile(dir, { encoding: 'utf8' }).then((content: string) => {
           let useTypescript: boolean = false;
