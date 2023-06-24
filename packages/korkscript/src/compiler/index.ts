@@ -6,7 +6,7 @@ const fileutils = require("../utils/fileutils")
 const logger = require("../logger")
 const expression = require("../expressions")
 
-export function runCompiler(p: string): Promise<CompilerResponse> {
+export async function runCompiler(p: string): Promise<CompilerResponse> {
     const promise: Promise<CompilerResponse> = new Promise((resolve, reject) => {
         const compiler: Compiler = new Compiler(p)
         compiler.start()
@@ -14,6 +14,9 @@ export function runCompiler(p: string): Promise<CompilerResponse> {
         getFilesToCompile(p).then((f: string[]) => {
             files = f;
             logger.info("Found " + files.length + " files to compile!")
+            files.forEach(file => {
+              await compileFile(file)
+            })
             resolve(compiler.stop(true))
         })
     
