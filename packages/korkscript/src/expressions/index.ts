@@ -1,7 +1,7 @@
 const logger = require("../logger")
 import {Expression, BasicExpression} from "./types"
 
-export const defaultModules = [require("./func")]
+export const defaultModules = [require("./func.js")]
 
 
 export function getDefaultExpressions(): any[] {
