@@ -26,7 +26,7 @@ export function getFilesToCompile(p: string): Promise<string[]> {
         fileutils.getFileList(p).then((files: string[]) => {
             files.forEach(file => {
                 if(file.endsWith(".ks")) {
-                    f.push(path.join(p, file))
+                    f.push(file)
                 }
                 logger.info(file)
             })
