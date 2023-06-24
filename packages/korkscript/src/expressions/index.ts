@@ -8,8 +8,8 @@ export function getDefaultExpressions(): any[] {
     let ex: any[] = []
      defaultModules.forEach(module => {
       Object.keys(module).forEach((key: any) => {
-        if(key["expressionType"] != undefined) {
-          ex.push(key)
+        if(module[key]["expressionType"] != undefined) {
+          ex.push(module[key])
         }
       })
     })
