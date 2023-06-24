@@ -41,6 +41,11 @@ export async function compileFile(dir: string) {
     try {
         const content = await fs.readFile(dir, { encoding: 'utf8' });
 
+        let useTypescript: boolean = false;
+
+        if(content.includes("#include typescript")) {
+          useTypescript = true;
+        }
         
 
     } catch (err) {
