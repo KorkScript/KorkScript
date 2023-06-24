@@ -7,7 +7,7 @@ export const defaultModules = [require("./func.js")]
 export function getDefaultExpressions(): any[] {
     let ex: any[] = []
      defaultModules.forEach(module => {
-      Object.keys((key: any) => {
+      Object.keys(module).forEach((key: any) => {
         if(key["expressionType"] != undefined) {
           ex.push(key)
         }
