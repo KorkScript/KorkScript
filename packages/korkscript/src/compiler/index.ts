@@ -4,6 +4,7 @@ const fs = require("fs")
 const path = require("path")
 const fileutils = require("../utils/fileutils")
 const logger = require("../logger")
+const expression = require("../expressions")
 
 export function runCompiler(p: string): Promise<CompilerResponse> {
     const promise: Promise<CompilerResponse> = new Promise((resolve, reject) => {
@@ -47,6 +48,9 @@ export async function compileFile(dir: string) {
           useTypescript = true;
         }
         
+        let expressions: any[] = expression.getDefaultExpressions()
+
+        console.log(expressions.toString())
 
     } catch (err) {
         console.log(err);
