@@ -11,7 +11,7 @@ export async function runCompiler(p: string): Promise<CompilerResponse> {
         const compiler: Compiler = new Compiler(p)
         compiler.start()
         getFilesToCompile(p).then((f: string[]) => {
-            logger.info("Found " + files.length + " files to compile!")
+            logger.info("Found " + f.length + " files to compile!")
             f.forEach((file: string) => async function() {
                compileFile(file)
             })
