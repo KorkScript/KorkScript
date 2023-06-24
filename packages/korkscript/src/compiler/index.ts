@@ -12,9 +12,10 @@ export function runCompiler(p: string): Promise<CompilerResponse> {
         let files: string[] = [];
         getFilesToCompile(p).then((f: string[]) => {
             files = f;
-            logger.info("Found " + f.length + " files to compile!")
+            logger.info("Found " + files.length + " files to compile!")
+            resolve(compiler.stop(true))
         })
-        resolve(compiler.stop(true))
+    
     
     })
     return promise;
