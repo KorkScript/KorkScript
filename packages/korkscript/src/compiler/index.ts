@@ -28,6 +28,7 @@ export function getFilesToCompile(p: string): Promise<string[]> {
                 if(file.endsWith(".ks")) {
                     f.push(path.join(p, file))
                 }
+                logger.info(file)
             })
         })
         resolve(f)
