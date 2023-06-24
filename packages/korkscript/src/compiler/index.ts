@@ -31,8 +31,8 @@ export function getFilesToCompile(p: string): Promise<string[]> {
                 }
                 logger.info(file)
             })
+            resolve(f)
         })
-        resolve(f)
     })
     return promise;
 }
